@@ -15,19 +15,19 @@ export default function App() {
     <>
       <Header />
       <main>
-        <Hero />
-        <section id="solution">
+        <Hero />        
+        <section id="a-propos">
           <SectionDigital />
         </section>
-        <section id="parcours">
           <SectionJourney />
-        </section>
         <SectionCtaGreen />
         <SectionBackoffice />
         <section id="tarifs">
           <SectionPricing />
         </section>
+        <section id="jeux">
         <SectionCatalogue />
+        </section>
         <SectionStats />
         <SectionCtaRed />
       </main>
