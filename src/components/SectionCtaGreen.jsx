@@ -1,19 +1,23 @@
+import Lightning from "../assets/Lightning.svg";
+import Heart from "../assets/Heart.svg";
+import Thing from "../assets/Thing.svg";
+
 export default function SectionCtaGreen() {
   const cards = [
     {
       title: 'Engagement immédiat',
       desc: 'Chaque produit devient une opportunité de jeu',
-      icon: '⚡',
+      icon: Lightning,
     },
     {
       title: 'Fidélisation naturelle',
       desc: 'Les clients reviennent pour compléter leur collection',
-      icon: '🔄',
+      icon: Heart,
     },
     {
       title: 'Viralité organique',
       desc: 'Les fans partagent et échangent entre eux',
-      icon: '📢',
+      icon: Thing,
     },
   ];
 
@@ -36,7 +40,7 @@ export default function SectionCtaGreen() {
               className="w-full rounded-xl sm:rounded-2xl bg-white/10 backdrop-blur-sm p-6 sm:p-8 flex flex-col items-center"
             >
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-white/20 flex items-center justify-center text-2xl sm:text-3xl mb-3 sm:mb-4">
-                {icon}
+                <Icon icon={icon} />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-1 sm:mb-2">{title}</h3>
               <p className="text-green-50 text-sm sm:text-base leading-6">{desc}</p>
@@ -46,4 +50,8 @@ export default function SectionCtaGreen() {
       </div>
     </section>
   );
+}
+
+function Icon({ icon }) {
+  return <img src={icon} alt="icon" />;
 }
