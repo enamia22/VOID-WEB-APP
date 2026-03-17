@@ -1,3 +1,9 @@
+import Arch from '../assets/Arch.svg';
+import QR from '../assets/QR.svg';
+import Gift from '../assets/Gift.svg';
+import Arrow from '../assets/Arrow.svg';
+import Bulb from '../assets/Bulb.svg';
+
 export default function Hero() {
   const stats = [
     { value: '500K+', label: 'Interactions/mois', color: 'text-brand-green-dark' },
@@ -22,19 +28,28 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-container px-4 sm:px-6 lg:px-16 py-12 sm:py-16 md:py-24 lg:py-32 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div className="relative z-10 w-full max-w-container px-4 py-12 sm:py-16 md:py-24 lg:py-32 flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
         <div className="flex flex-col items-start gap-6 sm:gap-8 w-full max-w-[608px] text-center lg:text-left">
-          <div className="space-y-2 w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[72px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900">
+          <div className="space-y-2 w-full"  style={{ background: 'White' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[72px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 relative">
               Transformez chaque{' '}
-              <span className="text-gradient-green">produit</span>
+              <span className="relative inline-block">
+                <span className="text-gradient-green relative z-10">produit</span>
+                <span className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-full flex justify-center lg:justify-start z-0 pointer-events-none">
+                  <img
+                    src={Arch}
+                    className="mx-auto lg:mx-0 w-32 sm:w-44 md:w-56 lg:w-64 xl:w-70-auto"
+                    alt="arch"
+                  />
+                </span>
+              </span>
               <br className="hidden sm:block" />
               <span className="sm:inline"> en expérience de jeu</span>
             </h1>
           </div>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 leading-relaxed max-w-[569px] w-full mx-auto lg:mx-0">
             YouCanWin connecte vos marques aux fans de football à travers des mécaniques de gamification
-            innovantes. Codes QR, cartes digitales, défis et récompenses.
+            innovantes. <span className='font-bold text-slate-900'>Codes QR, cartes digitales, défis et récompenses.</span>
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-8 w-full">
@@ -51,7 +66,7 @@ export default function Hero() {
               href="#demo"
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-brand-green to-brand-green-dark text-white font-medium text-base sm:text-lg shadow hover:opacity-95 w-full sm:w-auto"
             >
-              Demander une démo
+              Voir la démo
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
@@ -59,7 +74,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl border-2 border-slate-300 bg-white text-slate-700 font-medium text-base sm:text-lg hover:bg-slate-50 w-full sm:w-auto"
             >
               <Play className="w-5 h-5" />
-              Voir la démo
+              Comment ça marche
             </a>
           </div>
 
@@ -73,7 +88,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex-1 flex justify-center w-full lg:max-w-[50%] lg:pl-8 order-first lg:order-last">
+        <div className="flex-1 flex justify-center w-full lg:max-w-[50%] lg:pl-8 order-first lg:order-last lg:-mt-4 xl:-mt-6">
           <PhoneMockup />
         </div>
       </div>
@@ -81,27 +96,14 @@ export default function Hero() {
   );
 }
 
-function ArrowRight({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="none">
-      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function Play({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 20 20" fill="none">
-      <path d="M5 4l10 6-10 6V4z" stroke="currentColor" strokeWidth="1.67" fill="none" />
-    </svg>
-  );
-}
 
 function PhoneMockup() {
   return (
-    <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[448px]">
-      <div className="rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] border-4 sm:border-6 lg:border-8 border-slate-900 shadow-2xl bg-slate-900 p-1.5 sm:p-2">
-        <div className="rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] bg-white overflow-hidden min-h-[320px] sm:min-h-[360px] lg:min-h-[400px] flex flex-col">
+    <>
+    
+    <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[448px] lg:h-[796px]">
+      <div className="rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] border-2 sm:border-2 lg:border-2 border-slate-900 shadow-2xl bg-slate-900 p-1.5 sm:p-2 h-full">
+        <div className="rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] bg-white overflow-hidden h-full flex flex-col">
           <div
             className="p-4 sm:p-5 lg:p-6 pb-3 lg:pb-4"
             style={{ background: 'linear-gradient(180deg, #16A34A 0%, #0B6B3A 100%)' }}
@@ -123,26 +125,18 @@ function PhoneMockup() {
               </div>
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-3 gap-1.5 sm:gap-2 p-3 sm:p-4">
+          <div className="flex-1 grid grid-cols-3 gap-2 p-3 sm:p-4 content-start">
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
-                className="aspect-[136/171] rounded-md sm:rounded-lg bg-gradient-to-br from-slate-100 to-slate-200"
+                className="h-24 sm:h-28 md:h-32 lg:h-[170px] rounded-md sm:rounded-lg bg-gradient-to-br from-slate-100 to-slate-200"
               />
-            ))}
-          </div>
-          <div className="flex items-center justify-around py-2 sm:py-3 px-4 sm:px-6 border-t border-slate-200 bg-white">
-            {['Collection', 'Scanner', 'Échanges', 'Profil'].map((t) => (
-              <div key={t} className="flex flex-col items-center gap-0.5">
-                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-slate-300" />
-                <span className="text-[8px] sm:text-[10px] text-slate-600">{t}</span>
-              </div>
             ))}
           </div>
         </div>
       </div>
-      {/* Tooltips: hide on small screens, show from md */}
-      <div className="absolute -right-2 top-2 md:right-0 md:-right-4 md:top-4 z-10 w-[160px] sm:w-[190px] md:w-[210px] p-3 sm:p-4 bg-white border border-slate-100 rounded-xl md:rounded-2xl shadow-lg hidden sm:block">
+      {/* Tooltips: Figma offsets (right/top ≈ -16px) */}
+      <div className="absolute -right-2 top-2 md:-right-3 md:top-3 lg:-right-4 lg:-top-4 z-10 w-[160px] sm:w-[190px] md:w-[210px] p-3 sm:p-4 bg-white border border-slate-100 rounded-xl md:rounded-2xl shadow-lg hidden sm:block">
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0">
             <QRIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand-green" />
@@ -153,7 +147,7 @@ function PhoneMockup() {
           </div>
         </div>
       </div>
-      <div className="absolute -left-2 bottom-12 sm:bottom-14 md:-left-4 md:bottom-16 z-10 w-[160px] sm:w-[190px] md:w-[218px] p-3 sm:p-4 bg-white border border-slate-100 rounded-xl md:rounded-2xl shadow-lg hidden sm:block">
+      <div className="absolute -left-2 bottom-6 md:-left-3 md:bottom-6 lg:-left-20 lg:-bottom-5 z-10 w-[160px] sm:w-[190px] md:w-[218px] p-3 sm:p-4 bg-white border border-slate-100 rounded-xl md:rounded-2xl shadow-lg hidden sm:block">
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-red-100 flex items-center justify-center shrink-0">
             <GiftIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand-red" />
@@ -164,26 +158,59 @@ function PhoneMockup() {
           </div>
         </div>
       </div>
+          <div className="absolute flex bottom-0 left-0 right-0 items-center justify-around py-2 sm:py-3 px-4 sm:px-6 border-t border-slate-200 bg-white">
+            {['Collection', 'Scanner', 'Échanges', 'Profil'].map((t) => (
+              <div key={t} className="flex flex-col items-center gap-0.5">
+                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded bg-slate-300" />
+                <span className="text-[8px] sm:text-[10px] text-slate-600">{t}</span>
+              </div>
+            ))}
+          </div>
     </div>
+    </>
   );
 }
 
-function QRIcon({ className }) {
+function ArrowRight() {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.67">
-      <rect x="2" y="2" width="6" height="6" rx="1" />
-      <rect x="12" y="2" width="6" height="6" rx="1" />
-      <rect x="2" y="12" width="6" height="6" rx="1" />
-      <rect x="12" y="12" width="6" height="6" rx="1" />
-      <path d="M5 5h2v2H5zM13 5h2v2h-2zM5 13h2v2H5zM14 14h1v1h-1z" fill="currentColor" />
-    </svg>
+      <img
+       src={Arrow}
+       viewBox="0 0 20 20"
+       className="w-4 h-4"
+       alt="QR code"
+     />
   );
 }
 
-function GiftIcon({ className }) {
+function Play() {
   return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.67">
-      <path d="M10 6v12M10 6H7a2 2 0 010-4h3M10 6h3a2 2 0 100-4h-3M4 10h12v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6z" />
-    </svg>
+      <img
+       src={Bulb}
+       viewBox="0 0 20 20"
+       className="w-4 h-4"
+       alt="QR code"
+     />
+  );
+}
+
+function QRIcon() {
+  return (
+      <img
+       src={QR}
+       viewBox="0 0 20 20"
+       className="w-4 h-4"
+       alt="QR code"
+     />
+  );
+}
+
+function GiftIcon() {
+  return (
+      <img
+       src={Gift}
+       viewBox="0 0 20 20"
+       className="w-4 h-4"
+       alt="QR code"
+     />
   );
 }

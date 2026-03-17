@@ -11,8 +11,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur-md px-4 sm:px-6 lg:px-20">
-      <div className="max-w-container mx-auto min-h-[72px] flex flex-row justify-between items-center py-4 gap-4">
+    <header className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur-md">
+      <div className="max-w-container mx-auto min-h-[72px] flex flex-row justify-between items-center py-4 px-4 gap-4">
         <a href="/" className="flex items-center gap-2 sm:gap-3 shrink-0">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-brand-green to-brand-green-dark shadow flex items-center justify-center">
             <img
@@ -89,7 +89,7 @@ export default function Header() {
           menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="px-4 pb-4 pt-2 border-t border-slate-100 bg-white/98">
+        <nav className="max-w-container mx-auto px-4 pb-4 pt-2 border-t border-slate-100 bg-white/98">
           <ul className="flex flex-col gap-1">
             {navItems.map(({ label, href }) => (
               <li key={label}>
