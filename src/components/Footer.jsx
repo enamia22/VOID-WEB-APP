@@ -1,9 +1,9 @@
 import VectorLogo from "../assets/Vector.svg";
-import Insta from "../assets/insta.svg";
-import LinkedIn from "../assets/linked.svg";
+import Insta from "../assets/Insta.svg";
+import LinkedIn from "../assets/Linked.svg";
 import X from "../assets/X.svg";
-import Facebook from "../assets/facebook.svg";
-import Shield from "../assets/shield.svg";
+import Facebook from "../assets/Facebook.svg";
+import Shield from "../assets/Shield.svg";
 
 export default function Footer() {
   const quickLinks = ["Nos offres", "Nos jeux", "Album 2025", "À propos"];
