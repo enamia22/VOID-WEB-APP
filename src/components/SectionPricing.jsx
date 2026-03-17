@@ -1,3 +1,7 @@
+import Arrow from "../assets/Arrow3.svg";
+import Lightning from '../assets/GreenLight.svg';
+import World from '../assets/World.svg';
+
 export default function SectionPricing() {
   const plans = [
     {
@@ -15,10 +19,11 @@ export default function SectionPricing() {
         "Support par email",
         "1 marque",
       ],
-      cta: "Nous contacter",
+      cta: "Demander un devis",
       outline: true,
       popular: false,
       color: "green",
+      icon: Lightning,
     },
     {
       name: 'Scale',
@@ -36,10 +41,11 @@ export default function SectionPricing() {
         "Jusqu'à 3 marques",
         "API REST disponible",
       ],
-      cta: "Choisir Scale",
+      cta: "Planifier une démo",
       outline: false,
       popular: true,
       color: "red",
+      icon: Arrow,
     },
     {
       name: 'Enterprise',
@@ -58,10 +64,11 @@ export default function SectionPricing() {
         "SLA garanti 99.9%",
         "Formation et onboarding complet",
       ],
-      cta: "Nous contacter",
+      cta: "Contactez-nous",
       outline: true,
       popular: false,
       color: "green",
+      icon: World,
     },
   ];
 
@@ -99,7 +106,7 @@ export default function SectionPricing() {
                   plan.color === 'red' ? 'bg-red-50' : 'bg-green-50'
                 }`}
               >
-                <CheckIcon className={`w-6 h-6 ${plan.color === 'red' ? 'text-brand-red' : 'text-brand-green'}`} />
+                <CheckIcon icon={plan.icon} className={`w-6 h-6 ${plan.color === 'red' ? 'text-brand-red' : 'text-brand-green'}`} />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-slate-900">{plan.name}</h3>
               <p className={`text-xs sm:text-sm font-medium ${plan.color === 'red' ? 'text-brand-green' : 'text-brand-green'}`}>
@@ -139,10 +146,6 @@ export default function SectionPricing() {
   );
 }
 
-function CheckIcon({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M4 10l4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+function CheckIcon({ icon }) {
+return <img src={icon} alt="icon" />;
 }
