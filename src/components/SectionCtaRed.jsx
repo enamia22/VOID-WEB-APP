@@ -1,3 +1,6 @@
+import Email from '../assets/Mail.svg';
+import Calendar from '../assets/Calendar2.svg';
+
 export default function SectionCtaRed() {
   return (
     <section
@@ -16,13 +19,14 @@ export default function SectionCtaRed() {
             href="#demo"
             className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white text-brand-red-dark font-medium text-sm sm:text-base shadow-lg hover:bg-red-50 w-full sm:w-auto"
           >
-            Demander une démo
-            <ArrowRight className="w-5 h-5" />
+            <Icon icon={Calendar} />
+            Planifier une démo gratuite
           </a>
           <a
             href="#contact"
             className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white/10 border-2 border-white/30 text-white font-medium text-sm sm:text-base backdrop-blur-sm hover:bg-white/20 w-full sm:w-auto"
           >
+          <Icon icon={Email} />
             Nous contacter
           </a>
         </div>
@@ -31,10 +35,6 @@ export default function SectionCtaRed() {
   );
 }
 
-function ArrowRight({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="none">
-      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+function Icon({ icon }) {
+  return <img src={icon} alt="icon" className="w-5 h-5"/>;
 }
