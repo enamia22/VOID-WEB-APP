@@ -1,7 +1,7 @@
-import Ballon from '../assets/ballon.png';
-import Pronostics from '../assets/pronostics.png';
-import Quiz from '../assets/quiz.png';
-import Tombola from '../assets/tombola.png';
+import Ballon from '../assets/Ballon.png';
+import Pronostics from '../assets/Pronostics.png';
+import Quiz from '../assets/Quiz.png';
+import Tombola from '../assets/Tombola.png';
 
 export default function SectionCatalogue() {
   const games = [
